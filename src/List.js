@@ -22,7 +22,7 @@ const List = () => {
     var load_data = "";
     load_data = infos.map((item, index) => {
       return (
-        <div key={index}>
+        <div className="items-container" key={index}>
           <h1>
             <span>{item.flight_number}</span>&emsp;
             {item.name}
@@ -35,7 +35,11 @@ const List = () => {
 
   return (
     <div className="container">
-      <input type="text" placeholder="Enter Keywords" />
+      <input
+        className="input-search"
+        type="text"
+        placeholder="Enter Keywords"
+      />
       <div>{load_data}</div>
     </div>
   );
